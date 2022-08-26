@@ -16,7 +16,7 @@ app.use(session({
     }));
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
-mongoose.connect('mongodb+srv://ss007:ss007@cloudkitchencluster.ewiw2kv.mongodb.net/tgs?retryWrites=true&w=majority'); 
+mongoose.connect('mongodb+srv://ss007:ss007@cloudkitchencluster.behbqlm.mongodb.net/tgs?retryWrites=true&w=majority'); 
 mongoose.Promise = global.Promise;
 
 //set up template engine
