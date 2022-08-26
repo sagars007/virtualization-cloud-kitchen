@@ -1,6 +1,6 @@
 # Bistro Royale website
 
-Restaurant management website for a hypothetical restaurant-Bistro Royale using Node.js, MongoDB.
+Cloud kitchen service web app using Node.js, MongoDB. Fully deployed on the cloud!
 
 Nodejs Dependencies:
 * ejs
