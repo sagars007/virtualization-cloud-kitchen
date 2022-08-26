@@ -4,6 +4,8 @@ Cloud kitchen service web app using Node.js, MongoDB. Fully deployed on the clou
 
 https://cloud-bistro.herokuapp.com/index
 
+Mongodb atlas- https://www.mongodb.com/atlas/database
+
 Nodejs Dependencies:
 * ejs
 * express
@@ -16,7 +18,7 @@ Nodejs Dependencies:
 
 
 JSON file: 
-* newDatabase is latest json file to import menu items data into mongodb 'items' collection.
+* newDatabase is the json file to import menu items data into mongodb 'items' collection of tgs database.
 
 
 By ss007
