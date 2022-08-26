@@ -22,6 +22,6 @@ JSON file:
 
 By ss007
 
-![screenshot](screenshots/index page.jpeg)
-![screenshot](screenshots/heroku cloud hosting.png)
-![screenshot](screenshots/mongodb atlas.png)
+![screenshot](screenshots/index-page.jpeg)
+![screenshot](screenshots/heroku-hosting.png)
+![screenshot](screenshots/mongodb-atlas.png)
