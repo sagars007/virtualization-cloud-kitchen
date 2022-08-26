@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/tgstrans3.png" />
+	<script src="/assets/script.js"></script>
+	<title>Bistro Royale | Reservation</title>
+</head>
+<body>
+	<!--Toolbar-->
+	<div class="toolbar">
+		<a href="/index" class="logoLink">
+			<img class="toolbarImage" src="images/tgstrans2.png">
+			<span class="tgslogo">&nbsp Bistro Royale</span>
+		</a>
+		<ul class="toolbarList">
+			<li><a href="/index" class="toolbarLink">HOME</a></li><span class="pipe">  |  </span>
+			<li><a href="/menu" class="toolbarLink">MENU</a></li><span class="pipe">  |  </span>
+			<li><a href="/location" class="toolbarLink">LOCATION</a></li><span class="pipe"> | </span>
+			<li><a href="/reservation" class="toolbarLink">RESERVATION</a></li><span class="pipe"> | </span>
+			<li><a href="/about" class="toolbarLink">ABOUT US</a></li>
+		</ul>
+		<ul class="toolbarList2">
+			<!-- <li><a href="/cart" class="toolbarLink">CART &nbsp<i class="fa fa-shopping-cart"></i></a></li><span class="pipe"> |</span> -->
+			<li id=user><a href="/login" class="toolbarLink">LOGIN &nbsp<i class="fa fa-user"></i></a></li>
+		</ul>
+	</div>
+	<!--EndToolbar-->
+	<div id="login2order">
+		
+	</div>
+	<div class="parallax4 textOverlay">
+		<form class="login">
+			Note- Table capacity: 4 seater. Tables can be joined upon request.<br>
+			<div class="formelement" required>City:
+				<select class="formele" name="city" id="cityselect" required>
+					<option value="plsselect" disabled selected hidden>--pls select--</option>
+					<option>Vellore</option>
+					<option>Chennai</option>
+					<option>Mumbai</option>
+					<option>Delhi</option>
+					<option>Bangalore</option>
+					<option>Surat</option>
+					<option>Hyderabad</option>
+					<option>Panjim</option>
+					<option>Jaipur</option>
+				</select>
+			</div>
+			<div class="formelement">Time:
+  				<input class="formele" type="Time" name="time" id="time" required><br></div>
+  			<div class="formelement" required>Duration:
+				<select class="formele" name="duartion" id="durationselect" required>
+					<option disabled selected hidden>--pls select--</option>
+					<option>1 hour</option>
+					<option>1.5 hours</option>
+					<option>2 hours</option>
+					<option>2.5 hours</option>
+				</select>
+			</div>
+			<div class="formelement">Extras:
+				<select class="formele" name="requirements" id="extrasselect" required>
+					<option disabled selected hidden>--pls select--</option>
+					<option>None</option>
+					<option>Candle light</option>
+					<option>Flowers on table</option>
+					<option>Birthday song</option>
+				</select>
+			</div>
+			<div class="formelement" required>Imp comments:
+  				<textarea class="formele" name="instructions" placeholder="--optional--"></textarea><br></div><br>
+				  <div class="formelement" style="text-align: center;">&emsp;&emsp;&emsp; <span class="reservelegendgreen">Green: Selected</span> | <span class="reservelegendgrey">Grey: Available</span> | <span class="reservelegendred">Red: Unavailable</span></div>
+			<table class="room">
+				<tr>
+					<td rowspan="3">
+<pre>
+E
+X
+I
+T
+</pre>
+					</td>
+					<td><img onclick="toggle('t1')" src="images/tablegray.png" id="t1"><p>Table 1</p></td>
+					<td><img onclick="toggle('t2')" src="images/tablegray.png" id="t2"><p>Table 2</p></td>
+					<td><img onclick="toggle('t3')" src="images/tablegray.png" id="t3"><p>Table 3</p></td>
+					<td><img onclick="toggle('t4')" src="images/tablered.png" id="t4"><p>Table 4</p></td>
+				</tr>
+				<tr>
+					<td><img onclick="toggle('t5')" src="images/tablegray.png" id="t5"><p>Table 5</p></td>
+					<td><img onclick="toggle('t6')" src="images/tablegray.png" id="t6"><p>Table 6</p></td>
+					<td><img onclick="toggle('t7')" src="images/tablegray.png" id="t7"><p>Table 7</p></td>
+					<td><img onclick="toggle('t8')" src="images/tablegray.png" id="t8"><p>Table 8</p></td>
+				</tr>
+				<tr>
+					<td><img onclick="toggle('t9')" src="images/tablegray.png" id="t9"><p>Table 9</p></td>
+					<td><img onclick="toggle('t10')" src="images/tablered.png" id="t10"><p>Table 10</p></td>
+					<td><img onclick="toggle('t11')" src="images/tablegray.png" id="t11"><p>Table 11</p></td>
+					<td><img onclick="toggle('t12')" src="images/tablegray.png" id="t12"><p>Table 12</p></td>
+				</tr>
+			</table><br>
+			<span class ="button2 payment" onclick="checkLogin()">Reserve</span><br><br><br>
+		</form>
+	</div>
+	<div id="alert2">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		Login to reserve a table!
+	</div>
+	<script type="text/javascript">
+		var user = '<%= user %>';
+		if(user!=''){
+			user = user.split('@');
+			user = user[0];
+			user = user[0].toUpperCase() + user.slice(1); 
+			user = 'Hi '+user+'!';
+			document.getElementById('user').className = 'dropdown';
+			var dropdown = user+' &nbsp<i class="fa fa-chevron-down"></i><div class="dropdown-content"><a href="/profile">Profile</a><a href="/cart">Cart</a><a href="/orders">Orders</a><a href="/logout">Logout</a></div>';
+			document.getElementById('user').innerHTML = dropdown;
+			document.getElementById('login2order').style.display = 'none';
+		}
+		else{
+			document.getElementById('login2order').innerHTML = '<a href="/login">Login to reserve a table</a>';
+		} 
+		function toggle(id){
+			if(document.getElementById(id).src=='http://localhost:3000/images/tablegray.png'){
+				document.getElementById(id).src = 'images/tablegreen.png';
+			}
+			else if(document.getElementById(id).src=='http://localhost:3000/images/tablegreen.png'){
+				document.getElementById(id).src = 'images/tablegray.png';
+			}
+		}
+		function checkLogin(){
+			if(user==''){
+				document.getElementById('alert2').style.display = 'block';
+			}
+			else{
+				if((document.getElementById("time").value.length == 0)
+				|| (document.getElementById("cityselect").options[document.getElementById("cityselect").selectedIndex].value == "plsselect") 
+				|| (document.getElementById("cityselect").options[document.getElementById("durationselect").selectedIndex].value == "plsselect")
+				|| (document.getElementById("cityselect").options[document.getElementById("extrasselect").selectedIndex].value == "plsselect"))
+					{
+    					alert("empty field(s)")
+					}
+								
+				else
+				window.open('/reservesuccess', "_self");
+			}
+		}
+	</script>
+</body>
+</html>
