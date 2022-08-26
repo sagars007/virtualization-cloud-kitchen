@@ -1,6 +1,10 @@
 # Bistro Royale website
 
-Restaurant management website for a hypothetical restaurant-Bistro Royale using Node.js, MongoDB.
+Cloud kitchen service web app using Node.js, MongoDB. Fully deployed on the cloud!
+
+https://cloud-bistro.herokuapp.com/index
+
+Mongodb atlas- https://www.mongodb.com/atlas/database
 
 Nodejs Dependencies:
 * ejs
@@ -10,11 +14,10 @@ Nodejs Dependencies:
 * mongoose
 * nodemailer
 * nodemon
-* body, cookie parser
 
 
 JSON file: 
-* newDatabase is latest json file to import menu items data into mongodb 'items' collection.
+* newDatabase is the json file to import menu items data into mongodb 'items' collection of tgs database.
 
 
 By ss007
