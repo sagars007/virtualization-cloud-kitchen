@@ -16,7 +16,11 @@ app.use(session({
     }));
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
-mongoose.connect('mongodb+srv://ss007:ss007@cloudkitchencluster.behbqlm.mongodb.net/tgs?retryWrites=true&w=majority'); 
+
+//db connect via cloud service - mongodb atlas
+//replace <username> and <pass> with values for your db user
+//database name: tgs
+mongoose.connect('mongodb+srv://<username>:<pass>@cloudkitchencluster.behbqlm.mongodb.net/tgs?retryWrites=true&w=majority'); 
 mongoose.Promise = global.Promise;
 
 //set up template engine
