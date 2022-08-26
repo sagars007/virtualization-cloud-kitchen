@@ -65,7 +65,7 @@ a.toolBarLink:active{
 	list-style-type:none;
 	color:rgba(255,255,255,0.7);
     position:relative; 
-    left:15%; 
+    left:20%; 
     padding-inline-start: 0px;
 }
 .toolbarList li{
