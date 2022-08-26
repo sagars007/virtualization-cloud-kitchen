@@ -14,7 +14,6 @@ Nodejs Dependencies:
 * mongoose
 * nodemailer
 * nodemon
-* body, cookie parser
 
 
 JSON file: 
